@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Install</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="d-flex flex-column justify-content-center" style="height: 100vh">
+            <h1 class="align-self-center mb-5 text-light">Install App</h1>
+            <form id="installForm" style="min-width: 60%;" action="/shopify/auth" class="align-self-center">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">https://</span>
+                        </div>
+                        <input type="text" required autocomplete="off" autofocus="true" name="shop" class="form-control form-control-lg" placeholder="storename.myshopify.com">
+                        <div class="input-group-append">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Install</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('installForm').addEventListener("submit", function(e){
+        e.preventDefault()
+        if (this.elements["shop"].value.includes('https://') && this.elements["shop"].value.includes('.myshopify.com')){
+            this.elements["shop"].value = this.elements["shop"].value.split('https://')[1]
+            this.submit()
+        } 
+        
+        if (this.elements["shop"].value.includes('.myshopify.com')){
+            this.submit()
+        }    
+    }, false)
+</script>
+
+</html>

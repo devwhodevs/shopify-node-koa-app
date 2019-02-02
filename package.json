@@ -1,0 +1,44 @@
+{
+  "name": "shopify-node-koa-app",
+  "version": "1.0.0",
+  "description": "The goal of this example app is to provide a starting point for Shopify app developers so that they will be able to quickly spin up an embedded Shopify app using Node and KOA and get started using the Polaris design system and React components.",
+  "main": "index.js",
+  "author": "Alex Ostrovskyi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scopeoutsource/shopify-node-koa-app"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && nodemon --watch './server/**/*' --watch './client/**/*' -e js,jsx --ignore 'client/dist'  --exec 'webpack && node ./bin/www.js'"
+  },
+  "dependencies": {
+    "@shopify/koa-shopify-auth": "^3.1.8",
+    "@shopify/polaris": "^3.6.0",
+    "chalk": "^2.4.2",
+    "isomorphic-fetch": "^2.2.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-render-view": "^1.0.0",
+    "koa-session": "^5.10.1",
+    "koa2-static-middleware": "^1.0.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.1.0",
+    "@babel/core": "7.1.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.2",
+    "css-loader": "1.0.0",
+    "dotenv": "^6.2.0",
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.18.9",
+    "path": "^0.12.7",
+    "style-loader": "0.23.0",
+    "webpack": "4.19.1",
+    "webpack-cli": "3.1.1"
+  }
+}
