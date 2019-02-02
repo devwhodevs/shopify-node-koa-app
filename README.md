@@ -11,14 +11,14 @@ This example app uses Node, KOA, Webpack, React, and Shopify/polaris
 - [x] Shopify Authentication based on Koa
 
 ## Commands
-- `npm start` Build React and run the server with nodemon watch
-- `npm build` Build React
+- `npm start` or `yarn start` Build React and run the server with nodemon watch
+- `npm build` or `yarn build` Build React
 
 ## Running the project locally
 
 ### Install project dependencies
 - Install Node.js version 8.1.0 or higher.
-- Install project dependencies with `npm install`
+- Install project dependencies with `npm install` or `yarn install`
 
 ### Allow your app to talk to Shopify
 - Create a tunnel to localhost:4000 using [forward](https://forwardhq.com/) or [ngrok](https://ngrok.com/)
@@ -39,7 +39,7 @@ This example app uses Node, KOA, Webpack, React, and Shopify/polaris
   - Add the api secret from partners dash as `SHOPIFY_SECRET`
 - Open `client/src/App.jsx` and
    - Add the api key from partners dash as `apiKey` in AppProvider component parameter 
-- Run `npm install && npm start` or, if you prefer `yarn install && yarn start`
+- Run `npm install && npm start` or `yarn install && yarn start`
 - Open a browser to `{{ HOST }}/install`
 - Enter your store’s domain and hit install
 - 🚀 🎉
@@ -64,4 +64,4 @@ This example app uses the Official [shopify-api-node](https://github.com/MONEI/S
 This folder contains the UI demo using Polaris React components.
 
 ### `bin`
-This folder conatins appliaction starter point
+This folder conatins application starter point
